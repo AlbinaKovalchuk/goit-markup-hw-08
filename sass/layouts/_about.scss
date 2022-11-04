@@ -1,6 +1,13 @@
 .about {
   padding-top: 0px;
   gap: 30px;
+
+  @media screen and (min-width: 0px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    display:flex;
+  }
 }
 
 .about__item {
@@ -19,7 +26,7 @@
 }
 
 .about__text {
-  @include font(700,14px,1.14,0.03em);
+  @include font(700, 14px, 1.14, 0.03em);
   text-transform: uppercase;
   color: var(--accent-text);
 }
