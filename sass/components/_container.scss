@@ -1,0 +1,24 @@
+.container {
+    /* width: 1170 + 2*15px= 1200; */
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+// margin: 0 auto;
+margin-left: auto;
+margin-right: auto;
+    
+    
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+

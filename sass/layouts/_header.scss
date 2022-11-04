@@ -1,0 +1,84 @@
+// @media (min-width:800px ) {
+//   body {background-color: teal;}
+// }
+
+/* ------------------заголовок с навигацией------------- */
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #ececec;
+}
+
+/* короб для лого та кoроба с навигацией та контактами */
+.header__container {
+  @include align-center();
+}
+
+/* короб для ссылок с навигацией по сайту  */
+.navigation {
+  @include align-center();
+}
+
+/* короб для телеф та емайла */
+.container-connect {
+  margin-left: auto;
+}
+
+// відступ від лого, який є тільки в header
+.header__logo {
+  margin-right: 93px;
+}
+/*  элементы навигации по сайту /сайт портфолио контакты */
+.navigation {
+  @include font(500, 14px, 1.14, 0.02em);
+  color: var(--secondary-text-color);
+}
+.navigation__list {
+  gap: 50px;
+}
+
+.navigation__link {
+  transition: var(--timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-background);
+  }
+}
+
+.navigation__item {
+  position: relative;
+  &::after {
+    position: absolute;
+    left: 0px;
+    top: 46px;
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: var(--accent-background);
+    border-radius: 2px;
+  }
+}
+
+/* ========== номера телефона и емайла====== */
+.connect {
+  display: flex;
+  @include font(500, 14px, 1.14, 0.02em);
+  color: var(--primary-text-color);
+  fill: currentColor;
+  transition: color var(--timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-background);
+  }
+}
+
+.connect__item {
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.connect__icon {
+  margin-right: 7px;
+}
