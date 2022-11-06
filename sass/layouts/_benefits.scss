@@ -1,16 +1,25 @@
 .benefits {
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .benefits__title {
- @include font(700,14px,1.14,0.03em);
+  @include font(700, 14px, 1.14, 0.03em);
   text-transform: uppercase;
   color: var(--secondary-text-color);
   margin-bottom: 10px;
 }
 
 .benefits__item {
-  width: 270px;
+  // width: 270px; було для десктопу
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+   @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+  }
   &::before {
     display: block;
     content: '';

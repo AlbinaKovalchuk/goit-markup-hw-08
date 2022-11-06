@@ -1,13 +1,12 @@
 .about {
-  padding-top: 0px;
-  gap: 30px;
-
-  @media screen and (min-width: 0px) {
+  @media screen and (max-width: 1199px) {
     display: none;
   }
-  @media screen and (min-width: 1200px) {
-    display:flex;
-  }
+}
+
+.about {
+  padding-top: 0px;
+  gap: 30px;
 }
 
 .about__item {
