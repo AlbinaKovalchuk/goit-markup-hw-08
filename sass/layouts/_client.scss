@@ -1,10 +1,27 @@
 .client {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.client__item {
   justify-content: space-between;
-  text-align: center;
+
+  @media screen and (max-width: 767px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 60px) / 3);
+  }
+  @media screen and (min-width: 1200px) {
+       width: 170px;
+              
+  }
 }
 
 .client__link {
-  width: 170px;
+  // width: 170px;
   height: 92px;
   @include align-center();
   justify-content: center;

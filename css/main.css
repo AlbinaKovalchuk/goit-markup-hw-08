@@ -497,9 +497,8 @@ body {
 }
 
 .hero {
-  max-width: 1600px;
   margin: 0 auto;
-  padding: 200px 0px;
+  padding: 118px 0px;
   background: var(--secondary-background-color);
   text-align: center;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
@@ -510,10 +509,10 @@ body {
 
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   letter-spacing: 0.06em;
-  width: 696px;
+  max-width: 360px;
   color: var(--primary-background-color);
   text-transform: uppercase;
   margin: 0 auto;
@@ -521,16 +520,15 @@ body {
 }
 
 .hero__button {
-  width: 216px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: var(--accent-text);
   background: var(--accent-background);
   border-radius: 4px;
   border-color: transparent;
-  padding: 10px 32px;
+  padding: 10px 24px;
 }
 
 .benefits {
@@ -639,6 +637,7 @@ body {
 
 .team__item {
   width: 100%;
+  justify-content: space-between;
   background: var(--primary-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -679,12 +678,32 @@ body {
 }
 
 .client {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.client__item {
   justify-content: space-between;
-  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .client__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 768px) {
+  .client__item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client__item {
+    width: 170px;
+  }
 }
 
 .client__link {
-  width: 170px;
   height: 92px;
   display: flex;
   align-items: center;
@@ -713,12 +732,12 @@ body {
 }
 
 .container-foot {
-  display: flex;
-  align-items: baseline;
+  outline: 1px solid tomato;
 }
 
 .foot {
   display: block;
+  outline: 1px solid teal;
 }
 
 .footer__logo {

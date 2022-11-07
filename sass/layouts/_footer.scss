@@ -8,12 +8,16 @@
 }
 
 .container-foot {
-  display: flex;
-  align-items: baseline;
+outline: 1px solid tomato;
+  // для дексторопу
+  // display: flex;
+  // align-items: baseline;
 }
 
 .foot {
   display: block;
+  outline: 1px solid teal;
+  
 }
 
 .footer__logo {

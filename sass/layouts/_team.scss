@@ -7,10 +7,12 @@
 .team__item {
   // width: 270px; було для десктопу
   width: 100%;
-    @media screen and (min-width: 768px) {
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
     width: calc((100% - 30px) / 2);
   }
-   @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     width: calc((100% - 90px) / 4);
   }
   background: var(--primary-background-color);
