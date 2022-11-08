@@ -1,10 +1,10 @@
 .hero {
-   //  для декстопа
-  // max-width: 1600px;
-  // padding: 200px 0px;
+  padding: 118px 0px;
+  @include desktop {
+    max-width: 1600px;
+    padding: 200px 0px;
+  }
 
-   margin: 0 auto;
-   padding: 118px 0px;
   background: var(--secondary-background-color);
   text-align: center;
   background-image: linear-gradient(
@@ -18,16 +18,16 @@
 }
 
 .hero__title {
-  //  для декстопа
-  // @include font(900, 44px, 1.36, 0.06em);
-  // width: 696px;
-
   @include font(900, 26px, 1.61, 0.06em);
   max-width: 360px;
   color: var(--primary-background-color);
   text-transform: uppercase;
   margin: 0 auto;
   margin-bottom: 30px;
+  @include desktop {
+    max-width: 696px;
+    @include font(900, 44px, 1.36, 0.06em);
+  }
 }
 
 .hero__button {
@@ -37,7 +37,8 @@
   background: var(--accent-background);
   border-radius: 4px;
   border-color: transparent;
-  // для декстопа
-  // padding: 10px 32px;
   padding: 10px 24px;
+  @include desktop {
+    padding: 10px 32px;
+  }
 }

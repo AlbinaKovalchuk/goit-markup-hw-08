@@ -14,6 +14,12 @@
   }
 }
 
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
 .btn-item {
   margin-left: 8px;
 }

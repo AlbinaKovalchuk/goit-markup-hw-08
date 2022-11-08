@@ -15,8 +15,9 @@
     width: calc((100% - 60px) / 3);
   }
   @media screen and (min-width: 1200px) {
-       width: 170px;
-              
+    width: calc((100% - 150px) / 6);
+      //  width: 170px;
+             
   }
 }
 
