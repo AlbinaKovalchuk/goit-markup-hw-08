@@ -30,10 +30,12 @@
 }
 /*  элементы навигации по сайту /сайт портфолио контакты */
 .navigation {
+  
   @include font(500, 14px, 1.14, 0.02em);
   color: var(--secondary-text-color);
 }
 .navigation__list {
+  display: none;
   gap: 50px;
 }
 
@@ -61,7 +63,9 @@
 
 /* ========== номера телефона и емайла====== */
 .connect {
-  display: flex;
+  // display: flex;
+  //було для декстопу
+  display: none;
   @include font(500, 14px, 1.14, 0.02em);
   color: var(--primary-text-color);
   fill: currentColor;
