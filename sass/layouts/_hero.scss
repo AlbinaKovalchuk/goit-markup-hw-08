@@ -1,20 +1,31 @@
 .hero {
+  margin: 0 auto;
   padding: 118px 0px;
-  @include desktop {
-    max-width: 1600px;
-    padding: 200px 0px;
-  }
-
   background: var(--secondary-background-color);
   text-align: center;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(../images/hero.jpg);
+  background-image: var(--gradient), url(../images/hero_mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @include retina {
+    background-image: var(--gradient), url(../images/hero_mob_2x.jpg);
+  }
+
+  @include tablet {
+    background-image: var(--gradient), url(../images/hero_tabl.jpg);
+    @include retina {
+      background-image: var(--gradient), url(../images/hero_tabl_2x.jpg);
+    }
+  }
+
+  @include desktop {
+    max-width: 1600px;
+    padding: 200px 0px;
+    background-image: var(--gradient), url(../images/hero.jpg);
+    @include retina {
+      background-image: var(--gradient), url(../images/hero_2x.jpg);
+    }
+  }
 }
 
 .hero__title {
@@ -32,7 +43,6 @@
 
 .hero__button {
   @include font(700, 16px, 1.87, 0.06em);
-  // щрифты для кнопки везде одинаковые
   color: var(--accent-text);
   background: var(--accent-background);
   border-radius: 4px;
