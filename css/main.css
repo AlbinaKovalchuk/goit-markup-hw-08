@@ -427,12 +427,11 @@ body {
 .header__container {
   display: flex;
   align-items: center;
+  position: absolute;
 }
 
-/* короб для ссылок с навигацией по сайту  */
-.navigation {
-  display: flex;
-  align-items: center;
+.header__logo {
+  margin-right: 93px;
 }
 
 /* короб для телеф та емайла */
@@ -440,12 +439,99 @@ body {
   margin-left: auto;
 }
 
-.header__logo {
-  margin-right: 93px;
+.menu-open-btn {
+  margin-left: auto;
 }
 
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 48px 49px;
+  background-color: var(--primary-background-color);
+  width: 100vw;
+  height: 769px;
+  z-index: 1;
+}
+.mob-menu > .mob-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.mob-container {
+  outline: 3px solid tomato;
+}
+
+.mob-nav {
+  outline: 1px solid fuchsia;
+}
+
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+}
+
+.mob-menu__list {
+  margin-bottom: 50px;
+}
+
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+}
+
+.mob-connect__list {
+  margin-bottom: 64px;
+}
+
+.mob_connect {
+  display: block;
+  outline: 1px solid teal;
+}
+
+.connect__tel {
+  display: block;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: var(--accent-background);
+  padding-bottom: 32px;
+}
+
+.connect__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+
+.mob_soc__item {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-background);
+}
+
+/* короб для ссылок с навигацией по сайту  */
 /*  элементы навигации по сайту /сайт портфолио контакты */
 .navigation {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;

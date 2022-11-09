@@ -12,11 +12,12 @@
 /* короб для лого та кoроба с навигацией та контактами */
 .header__container {
   @include align-center();
+  position: absolute;
 }
 
-/* короб для ссылок с навигацией по сайту  */
-.navigation {
-  @include align-center();
+// відступ від лого, який є тільки в header
+.header__logo {
+  margin-right: 93px;
 }
 
 /* короб для телеф та емайла */
@@ -24,13 +25,84 @@
   margin-left: auto;
 }
 
-// відступ від лого, який є тільки в header
-.header__logo {
-  margin-right: 93px;
+.menu-open-btn {
+  margin-left: auto;
 }
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 48px 49px;
+  background-color: var(--primary-background-color);
+  width: 100vw;
+  // height: 100vw;
+  height: 769px;
+  z-index: 1;
+  > .mob-container {
+    display: flex;
+    height: 100%;
+     flex-direction: column;
+     justify-content: space-between;
+     overflow: auto;
+   }
+}
+.mob-container{outline: 3px solid tomato;
+   }
+
+
+
+.mob-nav {
+  outline: 1px solid fuchsia;
+}
+
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+}
+.mob-menu__list {
+  // margin-bottom: 302px;
+  margin-bottom: 50px;
+}
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.mob-menu__link {
+  @include font(500, 40px, 1.175, 0.02em);
+  color: var(--secondary-text-color);
+}
+.mob-connect__list {
+  margin-bottom: 64px;
+}
+
+.mob_connect {
+  display: block;
+  outline: 1px solid teal;
+}
+
+.connect__tel {
+  display: block;
+  @include font(500, 34px, 1.175, 0.02em);
+  color: var(--accent-background);
+  padding-bottom: 32px;
+}
+
+.connect__mail {
+  @include font(500, 24px, 1.16, 0.02em);
+  color: var(--primary-text-color);
+}
+
+.mob_soc__item {
+  @include font(500, 18px, 1.22, 0.02em);
+  color: var(--accent-background);
+}
+
+/* короб для ссылок с навигацией по сайту  */
 /*  элементы навигации по сайту /сайт портфолио контакты */
 .navigation {
-  
+  @include align-center();
   @include font(500, 14px, 1.14, 0.02em);
   color: var(--secondary-text-color);
 }
