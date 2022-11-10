@@ -1,23 +1,28 @@
-// @media (min-width:800px ) {
-//   body {background-color: teal;}
-// }
-
 /* ------------------заголовок с навигацией------------- */
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
+  @include desktop {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 /* короб для лого та кoроба с навигацией та контактами */
 .header__container {
-  @include align-center();
-  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include desktop {
+   @include align-center();
+    }
 }
 
 // відступ від лого, який є тільки в header
 .header__logo {
-  margin-right: 93px;
+  margin-right:0 ;
+  @include desktop {
+    margin-right: 93px;
+  }
 }
 
 /* короб для телеф та емайла */
@@ -27,6 +32,11 @@
 
 .menu-open-btn {
   margin-left: auto;
+  background-color: transparent;
+  border: none;
+  @include desktop {
+   display: none;
+  }
 }
 
 .mob-menu {
@@ -35,22 +45,22 @@
   left: 0;
   padding: 48px 49px;
   background-color: var(--primary-background-color);
-  width: 100vw;
-  // height: 100vw;
-  height: 769px;
+   
+  width: 50vw;
+  height: 100vw;
+  
   z-index: 1;
   > .mob-container {
     display: flex;
     height: 100%;
-     flex-direction: column;
-     justify-content: space-between;
-     overflow: auto;
-   }
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+  }
 }
-.mob-container{outline: 3px solid tomato;
-   }
-
-
+.mob-container {
+  outline: 3px solid tomato;
+}
 
 .mob-nav {
   outline: 1px solid fuchsia;
@@ -108,7 +118,8 @@
 }
 .navigation__list {
   display: none;
-  gap: 50px;
+  @include desktop{display: flex;
+  gap: 50px;}
 }
 
 .navigation__link {
@@ -135,16 +146,16 @@
 
 /* ========== номера телефона и емайла====== */
 .connect {
-  // display: flex;
-  //було для декстопу
-  display: none;
-  @include font(500, 14px, 1.14, 0.02em);
+ display: none;
+ @include desktop{display: flex;
+ @include font(500, 14px, 1.14, 0.02em);
   color: var(--primary-text-color);
   fill: currentColor;
   transition: color var(--timing-function);
   &:hover,
   &:focus {
     color: var(--accent-background);
+  }
   }
 }
 

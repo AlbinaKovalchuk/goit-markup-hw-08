@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./css/main.min.css " />
     <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
     <title> WebStudio</title>
+
 </head>
 
 <body>
@@ -49,24 +50,23 @@
                     </li>
                 </ul>
             </div>
+        </div>
+        
+             <div class="mob-menu is-hidden" data-menu>
 
-            <!-- конопка відкриття  меню на моб и таблет версиях -->
-            <button type="button" class="menu-open-btn" data-menu-open>
-                <svg class="" width="24" height="16">
-                    <use href="./images/icons.svg#icon_mob_menu"></use>
-                </svg>
-            </button>
-
-            <!-- блок меню для моб/таблет  версии -->
-            <div class="mob-menu" data-menu >
+                <button type="button" class="menu-open-btn" data-menu-open>
+                    <svg class="" width="40" height="40">
+                        <use href="./images/icons.svg#icon_mob_menu"></use>
+                    </svg>
+                </button>
+                
                 <div class="mob-container">
                     <div class="mob-nav">
-                        <button type="button" class="menu-close-btn"data-menu-close>
-                            <svg class="" width="24" height="16">
+                        <button type="button" class="menu-close-btn" data-menu-close>
+                            <svg class="" width="40" height="40">
                                 <use href="./images/icons.svg#icon-close"></use>
                             </svg>
                         </button>
-
                         <ul class="mob-menu__list">
                             <li class="mob-menu__item">
                                 <a class="mob-menu__link" href="./index.html">Студія</a>
@@ -78,11 +78,11 @@
                                 <a class="mob-menu__link" href="#">Контакти</a>
                             </li>
                         </ul>
-                    </div>
+                    </div> 
 
-                    <div class="mob_connect">
+                     <div class="mob_connect"> 
                         <!-- список  контактов -->
-                        <ul class="mob-connect__list">
+                         <ul class="mob-connect__list">
                             <li class="mob-connect__item">
                                 <a class="connect__tel" href="tel:+380961111111">+38 096 111 11 11</a>
                             </li>
@@ -91,7 +91,7 @@
                             </li>
                         </ul>
 
-                        <!-- список соц мереж словами -->
+                        <!-- список соц мереж для мобил -->
                         <ul class="mob_soc__list list">
                             <li class="mob_soc__item">
                                 <a class="mob_soc__link" href="#">
@@ -114,11 +114,11 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
-                </div>
-            </div>
+                    </div> 
+                </div> 
 
-        </div>
+            </div>   
+ 
     </header>
 
     <main>
@@ -246,7 +246,7 @@
                                             ./images/foto2_tabl_2x.jpg 2x" media="(min-width: 768px)" />
                             <source srcset="./images/foto2_mob.jpg 1x,
                                             ./images/foto2_mob_2x.jpg 2x" media="(max-width: 767px)" />
-                            <img src="./images/foto2.jpg" alt="фото-розробника" width="270">
+                            <img src="./images/foto2.jpg" alt="фото-розробника" width="450">
                         </picture>
                         <div class="user">
                             <h3 class="user__name">Ольга Рєпіна</h3>
@@ -293,7 +293,7 @@
                                             ./images/foto3_tabl_2x.jpg 2x" media="(min-width: 768px)" />
                             <source srcset="./images/foto3_mob.jpg 1x,
                                             ./images/foto3_mob_2x.jpg 2x" media="(max-width: 767px)" />
-                            <img src="./images/foto3.jpg" alt="фото-маркетолога" width="270">
+                            <img src="./images/foto3.jpg" alt="фото-маркетолога" width="450">
                         </picture>
                         <div class="user">
                             <h3 class="user__name">Микола Тарасов</h3>
@@ -339,7 +339,7 @@
                                             ./images/foto4_tabl_2x.jpg 2x" media="(min-width: 768px)" />
                             <source srcset="./images/foto4_mob.jpg 1x,
                                             ./images/foto4_mob_2x.jpg 2x" media="(max-width: 767px)" />
-                            <img src="./images/foto4.jpg" alt="фото-дизайнера-юай" width="270">
+                            <img src="./images/foto4.jpg" alt="фото-дизайнера-юай" width="450">
                         </picture>
                         <div class="user">
                             <h3 class="user__name">Михайло Єрмаков</h3>
@@ -497,12 +497,12 @@
                 </div>
             </div>
         </div>
-    </footer>  -->
+    <!-- </footer>   -->
     <!---------------------------------модальне вікно--------->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <form class="form">
-                <button type="button" class="modal-close-btn" data-modal-close>
+                <button type="button" class="modal-close-btn" data-modal-close >
                     <svg class="icon-close" width="18" height="18">
                         <use href="./images/icons.svg#icon-close"></use>
                     </svg>
@@ -555,6 +555,7 @@
 
         </div>
     </div>
+    
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
 </body>

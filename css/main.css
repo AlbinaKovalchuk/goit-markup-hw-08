@@ -418,29 +418,49 @@ body {
 
 /* ------------------заголовок с навигацией------------- */
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
   border-bottom: 1px solid #ececec;
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
 }
 
 /* короб для лого та кoроба с навигацией та контактами */
 .header__container {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  position: absolute;
+}
+@media screen and (min-width: 1200px) {
+  .header__container {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header__logo {
-  margin-right: 93px;
+  margin-right: 0;
 }
-
-/* короб для телеф та емайла */
+@media screen and (min-width: 1200px) {
+  .header__logo {
+    margin-right: 93px;
+  }
+} /* короб для телеф та емайла */
 .container-connect {
   margin-left: auto;
 }
 
 .menu-open-btn {
   margin-left: auto;
+  background-color: transparent;
+  border: none;
+}
+@media screen and (min-width: 1200px) {
+  .menu-open-btn {
+    display: none;
+  }
 }
 
 .mob-menu {
@@ -449,8 +469,8 @@ body {
   left: 0;
   padding: 48px 49px;
   background-color: var(--primary-background-color);
-  width: 100vw;
-  height: 769px;
+  width: 50vw;
+  height: 100vw;
   z-index: 1;
 }
 .mob-menu > .mob-container {
@@ -541,7 +561,12 @@ body {
 
 .navigation__list {
   display: none;
-  gap: 50px;
+}
+@media screen and (min-width: 1200px) {
+  .navigation__list {
+    display: flex;
+    gap: 50px;
+  }
 }
 
 .navigation__link {
@@ -568,16 +593,21 @@ body {
 /* ========== номера телефона и емайла====== */
 .connect {
   display: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color);
-  fill: currentColor;
-  transition: color var(--timing-function);
 }
-.connect:hover, .connect:focus {
-  color: var(--accent-background);
+@media screen and (min-width: 1200px) {
+  .connect {
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    fill: currentColor;
+    transition: color var(--timing-function);
+  }
+  .connect:hover, .connect:focus {
+    color: var(--accent-background);
+  }
 }
 
 .connect__item {
