@@ -1033,7 +1033,6 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .subscribe__container {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1063,7 +1062,6 @@ body {
 }
 
 .subscribe__button {
-  position: relative;
   width: 200px;
   padding: 10px 28px;
   font-weight: 700;
@@ -1078,14 +1076,8 @@ body {
 }
 
 .icon-send {
-  position: absolute;
-  right: 0px;
+  margin-left: 10px;
   fill: var(--accent-text);
-}
-@media screen and (min-width: 1200px) {
-  .icon-send {
-    right: 0px;
-  }
 }
 
 .button-portfolio {

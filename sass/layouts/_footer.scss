@@ -106,8 +106,7 @@
   outline: 2px solid turquoise;
   
   @include desktop {
-    position: relative;
-    display: flex;
+   display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 12px;
@@ -132,9 +131,9 @@
 }
 
 .subscribe__button {
-  position: relative;
   width: 200px;
   padding: 10px 28px;
+
   @include font(700, 16px, 1.875, 0.06em);
   color: var(--accent-text);
   background: var(--accent-background);
@@ -144,10 +143,7 @@
 }
 
 .icon-send {
-  position: absolute;
-  right: 0px;
+margin-left: 10px;
+ 
   fill: var(--accent-text);
-  @include desktop {
-    right: 0px;
-  }
 }
