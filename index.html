@@ -22,7 +22,7 @@
 
 <body>
     <!------------------------------- Header ------------------->
-    <header class="header">
+     <header class="header">
         <div class="container header__container">
             <a class="logo header__logo" href="./index.html" lang="en"><span class="logo__accent">Web</span>Studio</a>
             <nav class="navigation">
@@ -81,7 +81,7 @@
                     </div> 
 
                      <div class="mob_connect"> 
-                        <!-- список  контактов -->
+                        
                          <ul class="mob-connect__list">
                             <li class="mob-connect__item">
                                 <a class="connect__tel" href="tel:+380961111111">+38 096 111 11 11</a>
@@ -91,7 +91,7 @@
                             </li>
                         </ul>
 
-                        <!-- список соц мереж для мобил -->
+                        
                         <ul class="mob_soc__list list">
                             <li class="mob_soc__item">
                                 <a class="mob_soc__link" href="#">
@@ -119,7 +119,7 @@
 
             </div>   
  
-    </header>
+    </header> -->
 
     <main>
         <!------------------ section Hero------------------->
@@ -433,58 +433,62 @@
     </main>
 
     <!------------------------------------- footer ------------------->
-    <!-- <footer class="footer">
+    <footer class="footer">
         <div class="container container-foot">
-            <div class="foot">
-                <a class="footer__logo link" href="./index.html" lang="en"><span
-                        class="logo__accent">Web</span>Studio</a>
-                <address class="container-address">
-                    <a class="link address-link" href="https://goo.gl/maps/qexC5noHdbvhc4Kc7" target="_blank"
-                        rel="noopener noreferrer">м. Київ, пр-т Лесі Українки, 26</a>
-                </address>
-                <ul class="foot-contacts list">
-                    <li>
-                        <a class="foot-contacts link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-                    </li>
-                    <li>
-                        <a class="foot-contacts link" href="tel:+380961111111">+38 096 111 11 11</a>
-                    </li>
-                </ul>
+            <div class="container-tablet">
+                <div class="foot">
+                    <a class="footer__logo link" href="./index.html" lang="en"><span
+                            class="logo__accent">Web</span>Studio</a>
+                    <address class="container-address">
+                        <a class="link address-link" href="https://goo.gl/maps/qexC5noHdbvhc4Kc7" target="_blank"
+                            rel="noopener noreferrer">м. Київ, пр-т Лесі Українки, 26</a>
+                    </address>
+                    <ul class="foot-contacts list">
+                        <li>
+                            <a class="foot-contacts link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                        <li>
+                            <a class="foot-contacts link" href="tel:+380961111111">+38 096 111 11 11</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="add">
+                    <h3 class="add__title">приєднуйтесь</h3>
+                    <!-- список соц мереж -->
+                    <ul class="soc list">
+                        <li class="soc__item">
+                            <a class="soc__link" href="#">
+                                <svg class="" with="20" height="20">
+                                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="soc__item">
+                            <a class="soc__link" href=" #">
+                                <svg class="" with="20" height="20">
+                                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="soc__item">
+                            <a class="soc__link" href="#">
+                                <svg class="" with="20" height="20">
+                                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="soc__item">
+                            <a class="soc__link" href="#">
+                                <svg class="" with="20" height="20">
+                                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="add">
-                <h3 class="add__title">приєднуйтесь</h3>
-                <!-- список соц мереж -->
-    <!-- <ul class="soc list">
-                    <li class="soc__item">
-                        <a class="soc__link" href="#">
-                            <svg class="" with="20" height="20">
-                                <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="soc__item">
-                        <a class="soc__link" href=" #">
-                            <svg class="" with="20" height="20">
-                                <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="soc__item">
-                        <a class="soc__link" href="#">
-                            <svg class="" with="20" height="20">
-                                <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="soc__item">
-                        <a class="soc__link" href="#">
-                            <svg class="" with="20" height="20">
-                                <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+
 
             <div class="subscribe">
                 <h3 class="subscribe__title">підпишіться на розсилку</h3>
@@ -495,14 +499,16 @@
                         <use href="./images/icons.svg#icon-send"></use>
                     </svg>
                 </div>
+
             </div>
+
         </div>
-    <!-- </footer>   -->
+    </footer>
     <!---------------------------------модальне вікно--------->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <form class="form">
-                <button type="button" class="modal-close-btn" data-modal-close >
+                <button type="button" class="modal-close-btn" data-modal-close>
                     <svg class="icon-close" width="18" height="18">
                         <use href="./images/icons.svg#icon-close"></use>
                     </svg>
@@ -555,7 +561,7 @@
 
         </div>
     </div>
-    
+
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
 </body>

@@ -1,42 +1,72 @@
 .footer {
+  background: var(--secondary-background-color);
   margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
-  background: var(--secondary-background-color);
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include desktop {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }
-
 .container-foot {
-outline: 1px solid tomato;
-  // для дексторопу
-  // display: flex;
-  // align-items: baseline;
+  outline: 1px solid tomato;
+  text-align: center;
+  @include desktop {
+    display: flex;
+    text-align: left;
+  }
 }
 
+.container-tablet {
+  @include tablet {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 .foot {
-  display: block;
-  outline: 1px solid teal;
-  
+  display: inline-block;
+
+  margin-bottom: 60px;
+  @include desktop {
+    width: 100%;
+    margin-right: 92px;
+    margin-bottom: 0px;
+  }
+
+  outline: 1px solid fuchsia;
 }
 
 .footer__logo {
+  display: flex;
   font-family: 'Raleway';
   font-style: normal;
-  @include font(700, 26px, 1.19, 0.06em);
-  width: 145px;
-  margin-bottom: 20px;
   color: var(--accent-text);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  @include font(700, 24px, 1.16, 0.03em);
+  width: 154px;
+  text-align: center;
+
+  @include desktop {
+    margin-left: 0px;
+    @include font(700, 26px, 1.19, 0.06em);
+    width: 145px;
+  }
 }
 
 .container-address {
-  display: block;
   margin-bottom: 9px;
 }
 
 .address-link {
+  justify-content: center;
+  @include desktop {
+    justify-content: left;
+  }
+
   font-style: normal;
-  @include font(null, null, 1.71, 0.03em);
+  @include font(400, 14px, 1.71, 0.03em);
   color: var(--accent-text);
 }
 
@@ -44,59 +74,68 @@ outline: 1px solid tomato;
   display: block;
   margin-bottom: 9px;
   color: rgba(255, 255, 255, 0.6);
-}
-
-.add-title,
-.subscribe-title {
-  color: var(--accent-text);
-  margin-bottom: 20px;
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .add {
   display: block;
-  margin-left: 70px;
+  margin-bottom: 60px;
+  @include desktop {
+    margin-right: 93px;
+    margin-bottom: 0px;
+  }
+  outline: 1px solid gold;
 }
 
 .subscribe {
-  margin-left: 93px;
-  margin-right: 0px;
+  width: 100%;
+  @include tablet {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include desktop {
+    width: 100%;
+  }
+  outline: 1px solid green;
 }
 
 .subscribe__container {
-  position: relative;
-  display: flex;
-  width: 570px;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
+  outline: 2px solid turquoise;
+  
+  @include desktop {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
 }
 
-/* поле для e-mail  */
 .subscribe__inp {
-  display: flex;
-  width: 358px;
-  align-items: center;
-  font-size: 16px;
-  line-height: calc(20 / 16);
-  letter-spacing: 0.03em;
-  padding: 15px 0px 15px 16px;
+  width: 100%;
+  margin-bottom: 20px;
+  @include font(400, 16px, 1.25, 0.03em);
+  padding: 15px 15px 15px 15px;
   background-color: var(--secondary-background-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.6);
+
+  @include desktop {
+    display: flex;
+    margin-bottom: 0px;
+  }
 }
 
 .subscribe__button {
+  position: relative;
   width: 200px;
-  padding: 10px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: calc(30 / 16);
-  letter-spacing: 0.06em;
-  align-items: center;
-  text-align: left;
   padding: 10px 28px;
+  @include font(700, 16px, 1.875, 0.06em);
   color: var(--accent-text);
   background: var(--accent-background);
   border-radius: 4px;
@@ -106,7 +145,9 @@ outline: 1px solid tomato;
 
 .icon-send {
   position: absolute;
-  right: 28px;
-  margin-left: 10px;
+  right: 0px;
   fill: var(--accent-text);
+  @include desktop {
+    right: 0px;
+  }
 }
