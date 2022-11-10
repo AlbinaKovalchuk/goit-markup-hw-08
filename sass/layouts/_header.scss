@@ -44,11 +44,10 @@
   top: 0;
   left: 0;
   padding: 48px 49px;
-  // background-color: var(--primary-background-color);
-  background-color: #d4afaf;
-  width: 50vw;
-  height: 50vw;
-   z-index: 1;
+  background-color: var(--primary-background-color);
+  width: 100vw;
+  height: 100vw;
+    z-index: 1;
   > .mob-container {
     display: flex;
     height: 100%;
