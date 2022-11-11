@@ -93,6 +93,7 @@
   margin-right: 7px;
 }
 
+
 // -------------------меню для мобільной версии
 .menu-open-btn {
   margin-left: auto;
@@ -127,6 +128,7 @@
 //     justify-content: space-between;
 //     overflow: auto;
 }
+.mob-menu.is-hidden{ opacity: 0;}
 
 .mob-menu-list {
   display: block;

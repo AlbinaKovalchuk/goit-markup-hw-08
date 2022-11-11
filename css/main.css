@@ -566,6 +566,10 @@ body {
   height: 100%;
 }
 
+.mob-menu.is-hidden {
+  opacity: 0;
+}
+
 .mob-menu-list {
   display: block;
   margin-bottom: 50px;
