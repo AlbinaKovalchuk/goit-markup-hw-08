@@ -228,13 +228,19 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 528px;
-  min-height: 581px;
+  min-width: 450px;
+  min-height: 609px;
   background: var(--primary-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scaleY(1) rotate(0deg);
   transition: transform 250ms linear;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    min-width: 528px;
+    min-height: 581px;
+  }
 }
 
 /*  початковий стан модалки захований backdrop-ом   */
@@ -250,12 +256,18 @@ body {
 
 .form {
   position: relative;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   background: var(--accent-text);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
+}
+@media screen and (min-width: 1200px) {
+  .form {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-close-btn {
@@ -544,17 +556,13 @@ body {
   background-color: transparent;
   border: none;
 }
+.menu-open-btn:hover, .menu-open-btn:focus {
+  color: var(--accent-background);
+}
 @media screen and (min-width: 1200px) {
   .menu-open-btn {
     display: none;
   }
-}
-
-.menu-close-btn {
-  display: block;
-  margin-left: auto;
-  background-color: transparent;
-  border: none;
 }
 
 .mob-menu {
@@ -564,6 +572,29 @@ body {
   z-index: 1;
   width: 100%;
   height: 100%;
+}
+.mob-menu > .container {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.menu-close-btn {
+  position: absolute;
+  top: 0px;
+  right: 4px;
+  display: block;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.menu-close-btn:hover, .menu-close-btn:focus {
+  color: var(--accent-background);
 }
 
 .mob-menu.is-hidden {
@@ -588,10 +619,17 @@ body {
   line-height: 1.175;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+  transition: var(--timing-function);
+}
+.mob-menu__link:hover, .mob-menu__link:focus {
+  color: var(--accent-background);
 }
 
-.mob-connect {
-  outline: 1px solid fuchsia;
+.mob_connect__item {
+  margin-bottom: 32px;
+}
+
+.mob_connect__item:last-child {
   margin-bottom: 64px;
 }
 
@@ -602,7 +640,6 @@ body {
   line-height: 1.175;
   letter-spacing: 0.02em;
   color: var(--accent-background);
-  padding-bottom: 32px;
 }
 
 .connect__mail {
@@ -619,6 +656,13 @@ body {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-background);
+  padding: 0px 10px;
+  border-right: 2px solid;
+  border-right-color: rgba(33, 33, 33, 0.2);
+}
+
+.mob_soc__item:last-child {
+  border-right-color: transparent;
 }
 
 .hero {

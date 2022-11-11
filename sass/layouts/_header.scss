@@ -98,16 +98,13 @@
   margin-left: auto;
   background-color: transparent;
   border: none;
+  &:hover,
+  &:focus {
+    color: var(--accent-background);
+  }
   @include desktop {
     display: none;
   }
-}
-
-.menu-close-btn {
-  display: block;
-  margin-left: auto;
-  background-color: transparent;
-  border: none;
 }
 
 .mob-menu {
@@ -117,16 +114,34 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-  // width: 100vw;
-  // height: 100vw;
-  //   padding: 48px 49px;
-  //   > .mob-container {
-  //     display: flex;
-  //     height: 100%;
-  //     flex-direction: column;
-  //     justify-content: space-between;
-  //     overflow: auto;
+  //  width: 100vw;
+  //  height: 100vw;
+  > .container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+  }
 }
+
+.menu-close-btn {
+  position: absolute;
+  top: 0px;
+  right: 4px;
+  display: block;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: var(--accent-background);
+  }
+}
+
 .mob-menu.is-hidden {
   display: none;
   opacity: 0;
@@ -136,7 +151,6 @@
 
 .mob-menu-list {
   display: block;
-  // margin-bottom: 302px;
   margin-bottom: 50px;
 }
 
@@ -147,10 +161,18 @@
 .mob-menu__link {
   @include font(500, 40px, 1.175, 0.02em);
   color: var(--secondary-text-color);
+  transition: var(--timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-background);
+  }
 }
 
-.mob-connect {
-  outline: 1px solid fuchsia;
+.mob_connect__item {
+  margin-bottom: 32px;
+}
+
+.mob_connect__item:last-child {
   margin-bottom: 64px;
 }
 
@@ -158,7 +180,6 @@
   display: block;
   @include font(500, 34px, 1.175, 0.02em);
   color: var(--accent-background);
-  padding-bottom: 32px;
 }
 
 .connect__mail {
@@ -169,4 +190,10 @@
 .mob_soc__item {
   @include font(500, 18px, 1.22, 0.02em);
   color: var(--accent-background);
+  padding: 0px 10px;
+  border-right: 2px solid;
+  border-right-color: rgba(33, 33, 33, 0.2);
+}
+.mob_soc__item:last-child {
+  border-right-color: transparent;
 }
