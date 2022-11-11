@@ -1,6 +1,5 @@
 .footer {
   background: var(--secondary-background-color);
-  margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 60px;
   @include desktop {
@@ -8,12 +7,9 @@
     padding-bottom: 80px;
   }
 }
-.container-foot {
-  outline: 1px solid tomato;
-  text-align: center;
+.foot {
   @include desktop {
     display: flex;
-    text-align: left;
   }
 }
 
@@ -23,21 +19,32 @@
     justify-content: space-around;
   }
 }
-.foot {
-  display: inline-block;
 
+.container-logo-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 60px;
   @include desktop {
-    width: 100%;
     margin-right: 92px;
     margin-bottom: 0px;
+    align-items: flex-start;
   }
+}
 
-  outline: 1px solid fuchsia;
+.add {
+  text-align: center;
+  margin-bottom: 60px;
+  @include desktop {
+    text-align: left;
+    margin-right: 93px;
+    margin-bottom: 0px;
+  }
 }
 
 .footer__logo {
-  display: flex;
+  justify-content: center;
   font-family: 'Raleway';
   font-style: normal;
   color: var(--accent-text);
@@ -45,77 +52,55 @@
   margin-right: auto;
   margin-bottom: 20px;
   @include font(700, 24px, 1.16, 0.03em);
-  width: 154px;
-  text-align: center;
-
   @include desktop {
-    margin-left: 0px;
     @include font(700, 26px, 1.19, 0.06em);
-    width: 145px;
   }
 }
-
 .container-address {
   margin-bottom: 9px;
 }
-
 .address-link {
+  font-style: normal;
+  @include font(400, 14px, 1.71, 0.03em);
+  color: var(--accent-text);
   justify-content: center;
   @include desktop {
     justify-content: left;
   }
-
-  font-style: normal;
-  @include font(400, 14px, 1.71, 0.03em);
-  color: var(--accent-text);
 }
 
 .foot-contacts {
-  display: block;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 9px;
   color: rgba(255, 255, 255, 0.6);
-  @include desktop {
-    text-align: left;
-  }
-}
-
-.add {
-  display: block;
-  margin-bottom: 60px;
-  @include desktop {
-    margin-right: 93px;
-    margin-bottom: 0px;
-  }
-  outline: 1px solid gold;
 }
 
 .subscribe {
   width: 100%;
+  text-align: center;
+  margin: 0px auto;
   @include tablet {
     width: 450px;
-    margin-left: auto;
-    margin-right: auto;
   }
   @include desktop {
-    width: 100%;
+    margin: 0px;
+    text-align: left;
   }
-  outline: 1px solid green;
 }
 
 .subscribe__container {
-  outline: 2px solid turquoise;
-  
   @include desktop {
-   display: flex;
+    display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 12px;
   }
 }
 
 .subscribe__inp {
   width: 100%;
   margin-bottom: 20px;
+  margin-right: 12px;
   @include font(400, 16px, 1.25, 0.03em);
   padding: 15px 15px 15px 15px;
   background-color: var(--secondary-background-color);
@@ -123,27 +108,30 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.6);
-
   @include desktop {
-    display: flex;
+    min-width: 358px;
     margin-bottom: 0px;
   }
 }
 
 .subscribe__button {
-  width: 200px;
-  padding: 10px 28px;
-
+  min-width: 200px;
+  padding: 10px 28px 10px 28px;
   @include font(700, 16px, 1.875, 0.06em);
+  text-align: left;
   color: var(--accent-text);
   background: var(--accent-background);
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-color: transparent;
 }
-
+.send {
+  position: relative;
+  padding: 0px;
+  margin: 0px;
+}
 .icon-send {
-margin-left: 10px;
- 
+  position: absolute;
   fill: var(--accent-text);
+  transform: translate(-200%, 50%);
 }

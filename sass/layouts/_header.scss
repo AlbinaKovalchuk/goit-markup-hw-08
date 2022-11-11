@@ -1,7 +1,9 @@
 /* ------------------заголовок с навигацией------------- */
 .header {
   border-bottom: 1px solid #ececec;
-  @include desktop {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @media screen and (min-width: 768px) {
     padding-top: 24px;
     padding-bottom: 25px;
   }
@@ -20,17 +22,18 @@
 // відступ від лого, який є тільки в header
 .header__logo {
   margin-right: 0;
+  @include tablet {
+    margin-right: 87px;
+  }
   @include desktop {
     margin-right: 93px;
   }
 }
-/* короб для телеф та емайла */
+
 .container-connect {
   margin-left: auto;
 }
 
-/* короб для ссылок с навигацией по сайту  */
-/*  элементы навигации по сайту /сайт портфолио контакты */
 .navigation {
   @include align-center();
   @include font(500, 14px, 1.14, 0.02em);
@@ -38,9 +41,9 @@
 }
 .navigation__list {
   display: none;
-  @include desktop {
+  gap: 50px;
+  @media screen and (min-width: 768px) {
     display: flex;
-    gap: 50px;
   }
 }
 
@@ -53,39 +56,51 @@
 }
 
 .navigation__item {
-  position: relative;
-  &::after {
-    position: absolute;
-    left: 0px;
-    top: 46px;
-    content: '';
-    width: 100%;
-    height: 4px;
-    background: var(--accent-background);
-    border-radius: 2px;
+  @media screen and (min-width: 768px) {
+    position: relative;
+    ::after {
+      position: absolute;
+      left: 0px;
+      top: 46px;
+      content: '';
+      width: 100%;
+      height: 4px;
+      background: var(--accent-background);
+      border-radius: 2px;
+    }
   }
 }
 
 /* ========== номера телефона и емайла====== */
 .connect {
   display: none;
+  color: var(--primary-text-color);
+  fill: currentColor;
+  transition: color var(--timing-function);
+  &:hover,
+  &:focus {
+    color: var(--accent-background);
+  }
+
+  @include tablet {
+    @include font(500, 12px, 1.16, 0.02em);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
   @include desktop {
     display: flex;
     @include font(500, 14px, 1.14, 0.02em);
-    color: var(--primary-text-color);
-    fill: currentColor;
-    transition: color var(--timing-function);
-    &:hover,
-    &:focus {
-      color: var(--accent-background);
-    }
   }
 }
 
 .connect__item {
-  margin-right: 30px;
-  &:last-child {
-    margin-right: 0;
+  @include desktop {
+    margin-right: 30px;
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -102,7 +117,8 @@
   &:focus {
     color: var(--accent-background);
   }
-  @include desktop {
+
+  @media screen and (min-width: 768px) {
     display: none;
   }
 }
@@ -178,7 +194,7 @@
 
 .connect__tel {
   display: block;
-  @include font(500, 34px, 1.175, 0.02em);
+  @include font(500, 32px, 1.175, 0.02em);
   color: var(--accent-background);
 }
 
