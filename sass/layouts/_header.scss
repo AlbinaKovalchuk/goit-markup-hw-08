@@ -93,7 +93,6 @@
   margin-right: 7px;
 }
 
-
 // -------------------меню для мобільной версии
 .menu-open-btn {
   margin-left: auto;
@@ -111,60 +110,63 @@
   border: none;
 }
 
- .mob-menu {
-  position:fixed ;
+.mob-menu {
+  position: fixed;
   top: 0;
   background-color: var(--primary-background-color);
   z-index: 1;
   width: 100%;
   height: 100%;
-     // width: 100vw;
-    // height: 100vw;
-//   padding: 48px 49px; 
-//   > .mob-container {
-//     display: flex;
-//     height: 100%;
-//     flex-direction: column;
-//     justify-content: space-between;
-//     overflow: auto;
+  // width: 100vw;
+  // height: 100vw;
+  //   padding: 48px 49px;
+  //   > .mob-container {
+  //     display: flex;
+  //     height: 100%;
+  //     flex-direction: column;
+  //     justify-content: space-between;
+  //     overflow: auto;
 }
-.mob-menu.is-hidden{ opacity: 0;}
+.mob-menu.is-hidden {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 
 .mob-menu-list {
   display: block;
-   // margin-bottom: 302px;
-   margin-bottom: 50px;
+  // margin-bottom: 302px;
+  margin-bottom: 50px;
 }
- 
- .mob-menu__item:not(:last-child) {
-   margin-bottom: 32px;
- }
-  
- .mob-menu__link {
-  @include font(500, 40px, 1.175, 0.02em);
-   color: var(--secondary-text-color);
- }
 
- .mob-connect {
+.mob-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu__link {
+  @include font(500, 40px, 1.175, 0.02em);
+  color: var(--secondary-text-color);
+}
+
+.mob-connect {
   outline: 1px solid fuchsia;
   margin-bottom: 64px;
+}
 
- }
+.connect__tel {
+  display: block;
+  @include font(500, 34px, 1.175, 0.02em);
+  color: var(--accent-background);
+  padding-bottom: 32px;
+}
 
- .connect__tel {
-   display: block;
-   @include font(500, 34px, 1.175, 0.02em);
-   color: var(--accent-background);
-   padding-bottom: 32px;
- }
+.connect__mail {
+  @include font(500, 24px, 1.16, 0.02em);
+  color: var(--primary-text-color);
+}
 
- .connect__mail {
-   @include font(500, 24px, 1.16, 0.02em);
-   color: var(--primary-text-color);
-  
- }
-
- .mob_soc__item {
-   @include font(500, 18px, 1.22, 0.02em);
-   color: var(--accent-background);
- }
+.mob_soc__item {
+  @include font(500, 18px, 1.22, 0.02em);
+  color: var(--accent-background);
+}
