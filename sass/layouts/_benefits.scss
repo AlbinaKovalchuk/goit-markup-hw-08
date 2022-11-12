@@ -5,10 +5,13 @@
 }
 
 .benefits__title {
+  text-align: center;
   @include font(700, 14px, 1.14, 0.03em);
   text-transform: uppercase;
   color: var(--secondary-text-color);
   margin-bottom: 10px;
+  @media screen and (min-width: 768px){text-align:left;}
+  
 }
 
 .benefits__item {

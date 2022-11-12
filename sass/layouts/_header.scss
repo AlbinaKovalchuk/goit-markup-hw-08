@@ -12,7 +12,7 @@
 /* короб для лого та кoроба с навигацией та контактами */
 .header__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
   @include desktop {
     @include align-center();
@@ -26,7 +26,7 @@
     margin-right: 87px;
   }
   @include desktop {
-    margin-right: 93px;
+    margin-right: 92px;
   }
 }
 
@@ -36,14 +36,16 @@
 
 .navigation {
   @include align-center();
+  text-align: start;
   @include font(500, 14px, 1.14, 0.02em);
   color: var(--secondary-text-color);
 }
 .navigation__list {
   display: none;
-  gap: 50px;
   @media screen and (min-width: 768px) {
     display: flex;
+    gap: 50px;
+    margin-right: 86px;
   }
 }
 
@@ -86,7 +88,8 @@
     @include font(500, 12px, 1.16, 0.02em);
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 10px;
   }
 
   @include desktop {

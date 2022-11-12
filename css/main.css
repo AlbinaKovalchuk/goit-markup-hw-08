@@ -228,8 +228,6 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 450px;
-  min-height: 609px;
   background: var(--primary-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -241,9 +239,7 @@ body {
     min-width: 528px;
     min-height: 581px;
   }
-}
-
-/*  початковий стан модалки захований backdrop-ом   */
+} /*  початковий стан модалки захований backdrop-ом   */
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scaleY(0) rotate(90deg);
 }
@@ -256,8 +252,8 @@ body {
 
 .form {
   position: relative;
-  width: 450px;
-  height: 609px;
+  width: 100%;
+  height: 100%;
   background: var(--accent-text);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -304,12 +300,19 @@ body {
   color: var(--secondary-text-color);
   margin-bottom: 12px;
 }
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+  }
+}
 
 .form-container {
   position: relative;
 }
 
-/* заголовок-назви для поля вводу */
 .form-title-field {
   font-weight: 400;
   font-size: 12px;
@@ -354,12 +357,20 @@ body {
   width: 100%;
   padding: 12px 16px;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color var(--timing-function);
+}
+@media screen and (min-width: 1200px) {
+  .form-textarea {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+  }
 }
 .form-textarea::-moz-placeholder {
   color: rgba(117, 117, 117, 0.5);
@@ -414,8 +425,18 @@ body {
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 30px;
-  line-height: 1.71;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .check {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
 }
 
 .check-icon {
@@ -455,7 +476,7 @@ body {
 /* короб для лого та кoроба с навигацией та контактами */
 .header__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
 }
 @media screen and (min-width: 1200px) {
@@ -475,7 +496,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .header__logo {
-    margin-right: 93px;
+    margin-right: 92px;
   }
 }
 
@@ -486,6 +507,7 @@ body {
 .navigation {
   display: flex;
   align-items: center;
+  text-align: start;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -495,11 +517,12 @@ body {
 
 .navigation__list {
   display: none;
-  gap: 50px;
 }
 @media screen and (min-width: 768px) {
   .navigation__list {
     display: flex;
+    gap: 50px;
+    margin-right: 86px;
   }
 }
 
@@ -544,7 +567,8 @@ body {
     letter-spacing: 0.02em;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -767,6 +791,7 @@ body {
 }
 
 .benefits__title {
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -774,6 +799,11 @@ body {
   text-transform: uppercase;
   color: var(--secondary-text-color);
   margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .benefits__title {
+    text-align: left;
+  }
 }
 
 .benefits__item {
@@ -956,12 +986,6 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-@media screen and (min-width: 1200px) {
-  .footer {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-}
 
 @media screen and (min-width: 1200px) {
   .foot {
@@ -1022,6 +1046,9 @@ body {
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.06em;
+    justify-content: flex-start;
+    margin-left: 0px;
+    margin-bottom: 20px;
   }
 }
 
@@ -1051,7 +1078,6 @@ body {
   margin-bottom: 9px;
   color: rgba(255, 255, 255, 0.6);
 }
-
 .subscribe {
   width: 100%;
   text-align: center;
