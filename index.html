@@ -13,8 +13,8 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/main.min.css " />
-    <title> WebStudio</title>
-
+    <title> WebStudio </title>
+    <!-- добавить favicon -->
 </head>
 
 <body>
@@ -26,7 +26,7 @@
                 <ul class="navigation navigation__list list">
                     <li class="navigation__item"><a class="navigation__link" href="./index.html">Студія</a></li>
                     <li><a class="navigation__link" href="./portfolio.html">Портфоліо</a></li>
-                    <li><a class="navigation__link" href="#">Контакти</a> </li>
+                    <li><a class="navigation__link" href="./contacts.html">Контакти</a> </li>
                 </ul>
             </nav>
 
@@ -54,18 +54,16 @@
         <!-- ------------------------------------------------------------------ -->
         <div class="mob-menu is-hidden" data-menu>
             <div class="container">
-
                 <button type="button" class="menu-close-btn" data-menu-close>
                     <svg class="icon-close_mob" width="40" height="40">
                         <use href="./images/icons.svg#icon-close_mob"></use>
                     </svg>
                 </button>
-
                 <div>
                     <ul class="mob-menu-list list">
-                        <li class="mob-menu__item"><a class="mob-menu__link" href="./index.html">Студія</a></li>
+                        <li class="mob-menu__item"><a class="mob-menu__link--active" href="./index.html">Студія</a></li>
                         <li class="mob-menu__item"><a class="mob-menu__link" href="./portfolio.html">Портфоліо</a></li>
-                        <li class="mob-menu__item"><a class="mob-menu__link" href="#">Контакти</a></li>
+                        <li class="mob-menu__item"><a class="mob-menu__link" href="./contacts.html">Контакти</a></li>
                     </ul>
                 </div>
 
@@ -94,9 +92,9 @@
                                 <use href="#">Linkedin</use>
                             </a></li>
                     </ul>
-                    </div>
                 </div>
             </div>
+        </div>
     </header>
 
 
@@ -113,11 +111,13 @@
                 <ul class="benefits list">
                     <li class="benefits__item icon-detail">
                         <h3 class="benefits__title">Увага до деталей</h3>
-                        <p class="benefits__text">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
+                        <p class="benefits__text">Ідейні міркування, і навіть початок повсякденної роботи з формування
+                            позиції.</p>
                     </li>
                     <li class="benefits__item icon-punctuality">
                         <h3 class="benefits__title">Пунктуальність</h3>
-                        <p class="benefits__text">Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
+                        <p class="benefits__text">Завдання організації, особливо рамки і місце навчання кадрів тягне у
+                            себе.</p>
                     </li>
                     <li class="benefits__item icon-time">
                         <h3 class="benefits__title">Планування</h3>
@@ -125,7 +125,8 @@
                     </li>
                     <li class="benefits__item icon-tech">
                         <h3 class="benefits__title">Сучасні технології</h3>
-                        <p class="benefits__text">Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
+                        <p class="benefits__text">Значимість цих проблем настільки очевидна, що реалізація планових
+                            завдань.</p>
                     </li>
                 </ul>
             </div>
@@ -257,7 +258,6 @@
                             </ul>
                         </div>
                     </li>
-
                     <li class="team__item">
                         <picture>
                             <source srcset="./images/foto3.jpg 1x,
@@ -418,10 +418,10 @@
                     </address>
                     <ul class="foot-contacts list">
                         <li>
-                            <a class="foot-contacts link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                            <a class="foot-contacts link " href="mailto:info@devstudio.com">info@devstudio.com</a>
                         </li>
                         <li>
-                            <a class="foot-contacts link" href="tel:+380961111111">+38 096 111 11 11</a>
+                            <a class="foot-contacts link " href="tel:+380961111111">+38 096 111 11 11</a>
                         </li>
                     </ul>
                 </div>
@@ -467,9 +467,9 @@
                     <input class="subscribe__inp" type="email" name="mail" id="mail" placeholder="E-mail" />
                     <button class="subscribe__button" type="submit"> Підписатися</button>
                     <span class="send">
-                    <svg class="icon-send" width="24" height="24">
-                        <use href="./images/icons.svg#icon-send"></use>
-                    </svg>
+                        <svg class="icon-send" width="24" height="24">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg>
                     </span>
                 </div>
             </div>

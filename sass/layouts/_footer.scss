@@ -2,7 +2,6 @@
   background: var(--secondary-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
-  
 }
 .foot {
   @include desktop {
@@ -60,6 +59,7 @@
 .container-address {
   margin-bottom: 9px;
 }
+
 .address-link {
   font-style: normal;
   @include font(400, 14px, 1.71, 0.03em);
@@ -137,4 +137,22 @@
   position: absolute;
   fill: var(--accent-text);
   transform: translate(-200%, 50%);
+}
+
+.map__container {
+  margin: 0 auto;
+  margin-top: 20px;
+  max-width: 100%;
+  @include mobile {
+    width: 480px;
+    height: 480px;
+  }
+  @include tablet {
+    width: 768px;
+    height: 768px;
+  }
+  @include desktop {
+      width: 1200px;
+      
+  }
 }

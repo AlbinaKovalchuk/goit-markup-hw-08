@@ -51,8 +51,7 @@
 
 .navigation__link {
   transition: var(--timing-function);
-  &:hover,
-  &:focus {
+  &:hover {
     color: var(--accent-background);
   }
 }
